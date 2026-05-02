@@ -5,13 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <scrip src="./scrpits/modal.js" defer></scrip>
   </head>
   <body>
     <header>
-      <img src="./assets/portfolio_logo.svg" height="50 rem" width="50rem" />
+      <img src="./assets/portfolio_logo.svg" id="nav_icon" />
       <nav></nav>
     </header>
-    <main>F</main>
-    <footer>f</footer>
+    <main>
+      <section id="hero_section">
+        <section>
+          <h1>Holden Brunner</h1>
+          <p>Software Development Student at the University of Montana.</p>
+          <button type="button">
+            <a href="#project_container">View My Projects</a>
+          </button>
+        </section>
+        <img id="portfolio_selfie" src="./assets/portfolio_selfie.webp" />
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <ul id="project_container">
+          <li>
+            <article>
+              <button data-index="1">
+                <h2></h2>
+                <p></p>
+                <img src="./assets/practice_portfolio.png" />
+              </button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <button data-index="2">
+                <h2></h2>
+                <p></p>
+                <img src="./assets/redesign_portfolio.png" />
+              </button>
+            </article>
+          </li>
+          <li>
+            <article>
+              <button data-index="3">
+                <h2></h2>
+                <p></p>
+                <img src="./assets/modal_portfolio.png" />
+              </button>
+            </article>
+          </li>
+        </ul>
+        <dialog>
+          <h2 id="project_title"></h2>
+          <p id="project_details"></p>
+          <a id="github_button">View in Github</a>
+          <a id="live_button">View Live</a>
+          <button id="close_button">Close</button>
+        </dialog>
+      </section>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          I am a hardworking student with experience in using HTML, CSS,
+          JavaScript, and Python
+        </p>
+      </section>
+    </main>
+    <footer>
+      <h2>Lets Be Connected</h2>
+      <section>
+        <h3>Contact Information</h3>
+        <p>Email: holdenbrunner@gmail.com</p>
+        <a href="https://github.com/">Github</a>
+      </section>
+      <section>
+        <form>
+          <h3>Send Me a Message</h3>
+          <div>
+            <label for="user-name-input">Please Put Your User Name Here:</label>
+            <input
+              type="text"
+              id="user-name-input"
+              name="user-name-input"
+              required
+            />
+          </div>
+          <div>
+            <label for="email-input">Please Put Your Email Here:</label>
+            <input type="text" id="email-input" name="email-input" required />
+          </div>
+          <div>
+            <label for="comment-area">Please Leave Your Message Here:</label
+            ><br />
+            <textarea
+              placeholder="500 characters maximum"
+              name="message-box"
+              id="message-box"
+              maxlength="500"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="submit-button">Send Your Message</button>
+        </form>
+      </section>
+    </footer>
   </body>
 </html>
