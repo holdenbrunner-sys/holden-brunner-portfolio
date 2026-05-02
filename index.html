@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <scrip src="./scrpits/modal.js" defer></scrip>
+    <script src="./scrpits/modal.js" defer></script>
   </head>
   <body>
     <header>
       <img src="./assets/portfolio_logo.svg" id="nav_icon" />
-      <nav></nav>
+      <nav>
+        <ul>
+          <li><a href="#hero_section">Hero Section</a></li>
+          <li><a href="#project_container">Projetcs</a></li>
+          <li><a href="#about_me">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section id="hero_section">
@@ -28,7 +35,7 @@
         <ul id="project_container">
           <li>
             <article>
-              <button data-index="1">
+              <button data-index="0">
                 <h2></h2>
                 <p></p>
                 <img src="./assets/practice_portfolio.png" />
@@ -37,7 +44,7 @@
           </li>
           <li>
             <article>
-              <button data-index="2">
+              <button data-index="1">
                 <h2></h2>
                 <p></p>
                 <img src="./assets/redesign_portfolio.png" />
@@ -46,7 +53,7 @@
           </li>
           <li>
             <article>
-              <button data-index="3">
+              <button data-index="2">
                 <h2></h2>
                 <p></p>
                 <img src="./assets/modal_portfolio.png" />
@@ -57,12 +64,13 @@
         <dialog>
           <h2 id="project_title"></h2>
           <p id="project_details"></p>
-          <a id="github_button">View in Github</a>
-          <a id="live_button">View Live</a>
+          <button>
+            <a id="github_button" target="_blank">View in Github</a>
+          </button>
           <button id="close_button">Close</button>
         </dialog>
       </section>
-      <section>
+      <section id="about_me">
         <h2>About Me</h2>
         <p>
           I am a hardworking student with experience in using HTML, CSS,
@@ -70,7 +78,7 @@
         </p>
       </section>
     </main>
-    <footer>
+    <footer id="contact">
       <h2>Lets Be Connected</h2>
       <section>
         <h3>Contact Information</h3>

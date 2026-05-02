@@ -1,14 +1,21 @@
 //-------------------------------------------Array
-const project = [
+const projects = [
   {
     title: "Practice Webesite",
     details: "",
     github_link:
       "https://github.com/holdenbrunner-sys/Brunner-csci181-practice",
-    live_link: "https://holdenbrunner-sys.github.io/Brunner-csci181-practice/",
   },
-  { title: "Website Redesign", details: "", github_link: "", live_link: "" },
-  { title: "Modal Creation", details: "", github_link: "", live_link: "" },
+  {
+    title: "Website Redesign",
+    details: "",
+    github_link: "https://github.com/holdenbrunner-sys/brunner-csci181-p1",
+  },
+  {
+    title: "Modal Creation",
+    details: "",
+    github_link: "https://github.com/holdenbrunner-sys/Brunner-csci181-p2",
+  },
 ];
 
 //--------------------------------Modal Elements
@@ -17,7 +24,6 @@ const project_cards = document.querySelectorAll("[data-index]");
 const modal_title = document.getElementById("project_title");
 const modal_details = document.getElementById("project_details");
 const github_link = document.getElementById("github_button");
-const live_link = document.getElementById("live_link");
 const close_button = document.getElementById("close_button");
 
 //------------------------------------Functions
@@ -28,7 +34,6 @@ function openModalByIndex(index) {
   modal_title.textContent = projects[index].title;
   modal_details.textContent = projects[index].details;
   github_link.href = projects[index].github_link;
-  live_link.href = projects[index].live_link;
   document.body.style.overflow = "hidden";
 }
 function onCardClicked(event) {
@@ -37,12 +42,13 @@ function onCardClicked(event) {
   openModalByIndex(index);
 }
 
-for (let i = 0; i < 3; i++) {
-  modal[i].addEventListener("click", onCardClicked);
+for (let i = 0; i < project_cards.length; i++) {
+  project_cards[i].addEventListener("click", onCardClicked);
 }
 close_button.addEventListener("click", () => {
-  my_dialog.close();
+  modal.close();
+});
+modal.addEventListener("close", function () {
   document.body.style.overflow = "";
 });
-
 console.log("tree");

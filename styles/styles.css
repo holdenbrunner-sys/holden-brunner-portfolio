@@ -4,26 +4,45 @@ html {
 body {
   grid-template-rows: auto 1fr auto;
   margin: 0;
+  background-color: aliceblue;
+  flex-shrink: 0;
 }
 header {
   border-bottom: 1px solid;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 2;
 }
 footer {
   background-color: black;
   color: white;
   display: flex;
 }
+header {
+  background-color: rgb(255, 255, 255);
+}
+nav {
+  display: flex;
+}
 section {
-  margin: 10rem;
+  margin: 9rem;
 }
 ul {
   list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 img {
   height: 100%;
   width: 100%;
   overflow: hidden;
   position: relative;
+  object-fit: cover;
+  min-width: 20rem;
 }
 button {
   background-color: aliceblue;
