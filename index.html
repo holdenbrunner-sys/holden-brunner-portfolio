@@ -11,7 +11,7 @@
     <header>
       <img src="./assets/portfolio_logo.svg" id="nav_icon" />
       <nav>
-        <ul>
+        <ul id="main_nav">
           <li><a href="#hero_section">Hero Section</a></li>
           <li><a href="#project_container">Projetcs</a></li>
           <li><a href="#about_me">About Me</a></li>
@@ -28,7 +28,11 @@
             <a href="#project_container">View My Projects</a>
           </button>
         </section>
-        <img id="portfolio_selfie" src="./assets/portfolio_selfie.webp" />
+        <img
+          id="portfolio_selfie"
+          src="./assets/portfolio_selfie.webp"
+          alt="selfie"
+        />
       </section>
       <section>
         <h2>Projects</h2>
@@ -36,27 +40,33 @@
           <li>
             <article>
               <button data-index="0">
-                <h2></h2>
-                <p></p>
-                <img src="./assets/practice_portfolio.png" />
+                <h2>Practice Page</h2>
+                <p>Page used for practicing HTML</p>
+                <img
+                  src="./assets/practice_portfolio.png"
+                  alt="practice website page"
+                />
               </button>
             </article>
           </li>
           <li>
             <article>
               <button data-index="1">
-                <h2></h2>
-                <p></p>
-                <img src="./assets/redesign_portfolio.png" />
+                <h2>Redesign Project</h2>
+                <p>Redesighning an out of date website</p>
+                <img
+                  src="./assets/redesign_portfolio.png"
+                  alt="redesigned website page"
+                />
               </button>
             </article>
           </li>
           <li>
             <article>
               <button data-index="2">
-                <h2></h2>
-                <p></p>
-                <img src="./assets/modal_portfolio.png" />
+                <h2>Modal Project</h2>
+                <p>Learning how to create modals</p>
+                <img src="./assets/modal_portfolio.png" alt="modal page" />
               </button>
             </article>
           </li>
@@ -74,16 +84,20 @@
         <h2>About Me</h2>
         <p>
           I am a hardworking student with experience in using HTML, CSS,
-          JavaScript, and Python
+          JavaScript, and Python. I may not have much hands on experience but I
+          am willing to learn dedicated to providing customers with the best
+          service possible.
         </p>
+        <button>
+          <a href="./assets/resume.png" download>Download Resume</a>
+        </button>
       </section>
     </main>
     <footer id="contact">
-      <h2>Lets Be Connected</h2>
       <section>
         <h3>Contact Information</h3>
         <p>Email: holdenbrunner@gmail.com</p>
-        <a href="https://github.com/">Github</a>
+        <a href="https://github.com/" style="color: white">Github</a>
       </section>
       <section>
         <form>

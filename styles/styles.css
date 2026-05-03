@@ -4,7 +4,7 @@ html {
 body {
   grid-template-rows: auto 1fr auto;
   margin: 0;
-  background-color: aliceblue;
+  background-color: antiquewhite;
   flex-shrink: 0;
 }
 header {
@@ -15,14 +15,12 @@ header {
   display: flex;
   align-items: center;
   z-index: 2;
+  background-color: rgb(255, 255, 255);
 }
 footer {
   background-color: black;
   color: white;
   display: flex;
-}
-header {
-  background-color: rgb(255, 255, 255);
 }
 nav {
   display: flex;
@@ -30,11 +28,53 @@ nav {
 section {
   margin: 9rem;
 }
+h1 {
+  color: rgb(10, 30, 80);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+  color: rgb(20, 50, 150);
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bolder;
+  max-width: 40rem;
+  margin-inline: auto;
+}
 ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
+}
+li {
+  margin-right: 1rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  position: relative;
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 4px;
+  background: rgb(10, 30, 80);
+  transition: width 300ms ease-out;
+}
+a:hover::after {
+  width: 100%;
 }
 img {
   height: 100%;
@@ -42,7 +82,6 @@ img {
   overflow: hidden;
   position: relative;
   object-fit: cover;
-  min-width: 20rem;
 }
 button {
   background-color: aliceblue;
@@ -57,6 +96,23 @@ button:hover {
     0 4px 6px -1px rgb(0 0 0 / 0.1),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
   transform: translateY(-2px);
+}
+textarea {
+  width: 500px;
+  height: 150px;
+  resize: none;
+  border: 1px solid;
+  padding: 0.2rem;
+}
+textarea:hover,
+input:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+input {
+  padding: 0.2rem;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 1rem auto;
 }
 #hero_section {
   display: flex;
@@ -77,10 +133,16 @@ button:hover {
 }
 #project_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   padding: 0%;
   gap: 1rem;
+}
+#about_me {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

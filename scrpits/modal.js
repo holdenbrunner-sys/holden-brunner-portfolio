@@ -2,18 +2,21 @@
 const projects = [
   {
     title: "Practice Webesite",
-    details: "",
+    details:
+      "The website I first used when creating websites with HTML. Includes all my pracitces from using HTML design. Including creating hero sections, navigation, accessibility, Flexbox and JavaScript ",
     github_link:
       "https://github.com/holdenbrunner-sys/Brunner-csci181-practice",
   },
   {
     title: "Website Redesign",
-    details: "",
+    details:
+      "I took an out of date website and improved it using proper HTML structure and desighn layouts.",
     github_link: "https://github.com/holdenbrunner-sys/brunner-csci181-p1",
   },
   {
     title: "Modal Creation",
-    details: "",
+    details:
+      "I used JavaScript to create modals which contained various other projects of mine.",
     github_link: "https://github.com/holdenbrunner-sys/Brunner-csci181-p2",
   },
 ];
